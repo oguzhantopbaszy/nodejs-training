@@ -24,3 +24,6 @@ Neden NoSQL veritabanı kullanmalısınız?
 
 https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/
 https://www.mongodb.com/docs/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/
+
+-ÖDEVLER-
+-3 tane farklı şema oluştur ve compass'a ekle (save metodu sırasında bir hata meydana gelirse console'a yaz, hata meydana getirmek için require bir alan belirle.)(save metodunun callback'lerini incelememizi istiyor.)

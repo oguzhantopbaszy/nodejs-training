@@ -35,7 +35,10 @@ newWebUser.save()
 
 
 
-
+//mongodb'nin avantajları
+//dağınık dizayn yani her satırın kendine ait kolonlarının olabilmesi
+//satırlar içerisinde dağınık yapıların saklanabilmesi
+//Hız
 
 //DB First - Code First
 //DB First = Önce veritabanı üzerinden tablolar oluşturulur.
