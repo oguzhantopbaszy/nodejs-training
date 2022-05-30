@@ -1,0 +1,10 @@
+---NOTES---
+www.caniuse.com
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax OKU!
+
+---ÖDEV---
+-Ürünleri pahalıdan ucuza sırala(sort metodu kullanarak ve kullanmadan)
+-En pahalı ürün? sort metodu kullanarak yaz
+-Brezilyadan kaç adet sipariş aldım
+-Brezilyadan aldığın siparişlerin toplam tutarı
+-Brezilyadan aldığım en yüksek sipariş (jsOrderArraySample'ın içinde cevapları)

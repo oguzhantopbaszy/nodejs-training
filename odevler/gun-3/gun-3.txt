@@ -1,0 +1,43 @@
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+-The asynchronous method returns a promise to supply the value at some point in the future.
+
+-A Promise is in one of these states:
+
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed
+
+-The .then() method takes up to two arguments; the first argument is a callback function for the resolved case of the promise, and the second argument is a callback function for the rejected case. Each .then() returns a newly generated promise object, which can optionally be used for chaining;
+
+
+
+
+
+https://www.w3schools.com/js/js_json_intro.asp
+
+-JSON stands for JavaScript Object Notation
+
+-The JSON syntax is derived from JavaScript object notation, but the JSON format is text only. Code for reading and generating JSON exists in many programming languages.
+
+-JSON names require double quotes.
+
+-JSON can use arrays(unlike XML)
+
+-XML is much more difficult to parse than JSON. JSON is parsed into a ready-to-use JavaScript object.
+
+-JSON values cannot be one of the following data types:a function,a date,undefined
+
+-When receiving data from a web server, the data is always a string. Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+Example: const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+
+-It is a common mistake to call a JSON object literal "a JSON object". JSON cannot be an object. JSON is a string format. The data is only JSON when it is in a string format. When it is converted to a JavaScript variable, it becomes a JavaScript object.
+
+-When receiving data from a web server, the data is always a string. Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+
+-stringfy object => JSON, parse JSON => object
+
+
+

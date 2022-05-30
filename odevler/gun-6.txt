@@ -1,0 +1,23 @@
+İlişkisel Veritabanı Yönetim Sistemleri
+MSSQL
+MYSQL
+ORACLE
+PostgreSQL
+
+İlişkisel Olmayan Veritabanı Yönetim Sistemleri - NOSQL
+MongoDB => Json Document olarak verilerini depolamakta
+
+Nerede duracak bu MongoDB?
+1)Bağımsız bir linux sunucuda durabilir
+2)AWS-Google Cloud vb bulut sistemleri üzerinde durabilir
+3)Resmi sitesinin bana verdiği sunucularda durabilir
+
+CLUSTER içerisinde bir çok DB barındırabilir.
+Collection = Table
+Bir platformdan bir SQL platformuna bağlanıyorsanız bunun için kimi yöntemlerimiz var. Bazı araçlar kullanabilirsiniz. Bu araçların bazılarına ORM (Object Relation Mapping) deniyor.
+
+Neden NoSQL veritabanı kullanmalısınız?
+1)Esneklik
+2)Ölçeklenebilirlik
+3)Yüksek performans
+4)Yüksek oranda işlevsel

@@ -1,0 +1,16 @@
+Yazılım Güvenliği: https://www.youtube.com/watch?v=deEiUpnsmyA
+https://express-validator.github.io/docs/
+https://medium.com/batech/pop%C3%BCler-10-nodejs-paketi-6b1afe21a01c
+https://medium.com/batech/pop%C3%BCler-10-nodejs-paketi-2-8ea420276e0
+
+Middleware: Ara katman. İlk başta isteği karşılayan arkadaşa middleware diyebiliriz. Bana gelen request'i karşılayıp belki de bir şeyini kontrol etmemize olanak tanır. 
+
+-Ödevler-
+1)https://northwind.vercel.app/api/suppliers dataları çek:
+-get all suppliers (birkaç tane query string ile)ü
+-get supplier by id
+-post supplier (supplier ekle), validationları da yaz.
+-delete supplier
+-postmandan örnek datayı kaydet.
+-PUT Nedir? Bir örnek yap.
+-Suppliers dosyasını başka bir js dosyasına koy ve oradan export et?? bu bilmediğimiz bir durum.

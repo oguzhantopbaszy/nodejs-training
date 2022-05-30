@@ -1,0 +1,14 @@
+// Çekirdek modüller (paketleri bilgisayarına yüklüyorum)
+////http dediğimiz paket default olarak nodejs ile gelen ve global'e kurulan paket
+//kendimizde paket yazabiliyoruz
+var http = require('http');
+console.log(http.STATUS_CODES);
+
+//Paket yüklemeleri 3'e ayırıyoruz:
+1)Projeye yükleme
+2)Global'e yükleme
+3)Proje development ortamına yükleme
+
+//nodemon paketi sayesinde kodda yaptığımız değişiklikler projeyi durdurmamıza gerek kalmadan sayfamıza yansıyor. Arada bir durdurmakta fayda var.
+
+//Bir URL'de soru işareti görüyorsak bu query string anlamına geliyor.
