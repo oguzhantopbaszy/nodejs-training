@@ -21,3 +21,6 @@ Neden NoSQL veritabanı kullanmalısınız?
 2)Ölçeklenebilirlik
 3)Yüksek performans
 4)Yüksek oranda işlevsel
+
+https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-one-relationships-between-documents/
+https://www.mongodb.com/docs/manual/tutorial/model-referenced-one-to-many-relationships-between-documents/
