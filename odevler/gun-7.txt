@@ -1,1 +1,51 @@
 https://medium.com/batech/i%CC%87leri-nodejs-notlar%C4%B1-3-express-g%C3%BCvenli%C4%9Fi-1de52bd114d2
+
+
+//mongooseSample'ın içindeki index.js'de aldığımız notlardı, kullanmak için geri koyabiliriz.
+//Yeni bir web user ekleme işlemi
+// var newWebUser = new webUserModel({
+//     name : 'Oğuzhan',
+//     surname : 'TOPBAŞ',
+//     email : 'oguzhan@gmail.com',
+//     //address : 'Maltepe' //Bunun gibi olmayan bir kolonu yazdırmaya çalışırsak, database'e yazmaz. Bununla ilgili bir kontrol yaptırıp hata da verdirtemeyiz.
+//     city : ['İzmir', 'İstanbul', 'Adana'],
+//     detail : { language : 'English', color : 'yellow '}
+     
+// })
+
+// newWebUser.save((err,doc)=>{
+//     if(!err){
+//         //Hata yoksa if bloğuna girer
+//         console.log('Eklenen döküman', doc);
+//     }
+//     else{
+//         //Hata varsa else
+//         console.log('Hata',err);
+//     }
+//     //console.log(err); //parantez içine err yazınca hatayı, doc yazınca eklediğimiz document'ı bize geri dönüyor.
+// }) 
+
+
+
+
+//mongodb'nin avantajları
+//dağınık dizayn yani her satırın kendine ait kolonlarının olabilmesi
+//satırlar içerisinde dağınık yapıların saklanabilmesi
+//Hız
+
+//DB First - Code First
+//DB First = Önce veritabanı üzerinden tablolar oluşturulur.
+//Code First = Veritabanı tabloları (collectionlar kod üzerinde oluşturulup veritabanına bildirilir.) (mongoose kullanıyorsak koddan devam etmek daha çok tercih edilir.)
+
+// try {
+//     await mongoose.connect('mongodb+srv://topbasoguzhan:Daghan.3723@cluster0.fqply.mongodb.net/test')
+// } catch (error) {
+//     handleError(error);
+// } Yukardaki bağlantı kontrolüyle aynı şeye çıkıyor
+
+
+// setTimeout(() => {
+//     console.log(mongoose.connection.readyState)
+// }, 2000); //Aynı şekilde kontrol ettik. (1-connected, 2-connecting)
+
+//console.log(mongoose.connection.readyState) //bağlantıyı kontrol etmek için kullandık.
