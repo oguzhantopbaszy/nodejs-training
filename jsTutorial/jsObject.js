@@ -8,7 +8,7 @@ var product = {
     supplierName: 'Apple'
 }
 
-console.log(product.name);
+//console.log(product.name);
 
 var webUser = {
     name: 'Çağatay',
@@ -16,7 +16,7 @@ var webUser = {
     languages: ['js','csharp','swift']
 }
 
-console.log(webUser.languages[1])
+//console.log(webUser.languages[1])
 
 var order = {
     orderId : 4523,
@@ -27,4 +27,7 @@ var order = {
     }
 }
 
-console.log(order.detail.name);
+//console.log(order.detail.name);
+
+// console.log(order.orderId);
+// console.log(order['orderId']); //datayı çekebilmemizin iki farklı yolu
