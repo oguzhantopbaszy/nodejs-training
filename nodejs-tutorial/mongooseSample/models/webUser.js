@@ -5,9 +5,11 @@ const webUserSchema = new Schema({
     name : { type: String, required: true},
     surname : String,
     address : String,
+    password: String,
     email : String,
     city : [],
     detail : {},
+    failLoginCount: { type: Number, default: 0 },
     addDate : {type: Date, default: Date.now},
     isActive : { type:Boolean, default: true },
 

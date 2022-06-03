@@ -8,14 +8,13 @@ const app = express();
 var bodyParser = require('body-parser');
 const { webUserController } = require('./controllers/webUserController');
 const { connectionHelper } = require('./dbconnect/connectionHelper');
-
-//const { webUserSchema } = require('./models/webUser')
+connectionHelper.connect();
 
 //parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-
 //parse application/json
 app.use(bodyParser.json())
+
 
 
 
@@ -88,11 +87,15 @@ app.put('/api/webusers', (req, res) => {
 
 })
 
+app.post('/api/webusers/loginControl', (req, res) => {
+    webUserController.loginControl(req, res)
+})
+
 app.listen(8080, () => {
     console.log("Sunucum çalışıyor...");
 })
 
-connectionHelper.connect();
+
 
 
 

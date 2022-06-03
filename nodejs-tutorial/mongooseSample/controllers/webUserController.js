@@ -1,6 +1,14 @@
 //Bu controller webuserla ilgili işlemleri yapacak arkadaş
 
+var CryptoJS = require('crypto-js')
 const { webUserModel } = require("../models/webUser");
+const { webUserLogModel } = require('../models/webUserLog');
+
+const sha256 = require('crypto-js/sha256')
+const hmacSHA512 = require('crypto-js/hmac-sha512')
+const Base64 = require('crypto-js/enc-base64');
+const { userLoginKey } = require("../env/shaKey");
+
 
 const webUserController = {
     getById: (req, res) => {
@@ -54,10 +62,15 @@ const webUserController = {
         })
     },
     add: (req, res) => {
+
+        var encryptPassword = CryptoJS.AES.encrypt(req.body.password, userLoginKey).toString();
+
         var newWebUser = new webUserModel({
             name: req.body.name,
             surname: req.body.surname,
-            address: req.body.address
+            address: req.body.address,
+            password: encryptPassword,
+            email: req.body.email
         })
     
         newWebUser.save((err, doc) => {
@@ -108,6 +121,47 @@ const webUserController = {
             }
             else {
                 res.status(500).json(err)
+            }
+        })
+    },
+    loginControl: (req, res) => {
+        var email = req.body.email;
+        var password = req.body.password;
+
+        webUserModel.findOne({ email: email }, (err, doc) => {
+
+            var bytes = CryptoJS.AES.decrypt(doc.password, userLoginKey);
+            var decryptedData = bytes.toString(CryptoJS.enc.Utf8); //Bu iki satırda encrypt yaptığımız password'u decrypte edip, girilen parolayla uyuşup uyuşmadığının kontrolünün yapılmasını sağladık.
+
+            if (!err && doc != null) {
+                
+                if (password == decryptedData) {
+
+                    res.send("Login success!!");
+
+                    var newWebUserLog = new webUserLogModel({
+                        loginType: 'Success',
+                        ipAddress: req.socket.remoteAddress
+
+                    })
+                    newWebUserLog.save();
+
+                }
+                else{
+                    doc.failLoginCount = doc.failLoginCount + 1;
+                    doc.save()
+                    var newWebUserLog = new webUserLogModel({
+                        loginType: 'Fail',
+                        ipAddress: req.socket.remoteAddress,
+                        webUserId: doc._id
+
+                    })
+                    newWebUserLog.save();
+                    res.status(404).send("Not found!")
+                }
+            }
+            else {
+                res.status(404).send("Not found!")
             }
         })
     }
